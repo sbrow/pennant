@@ -60,7 +60,7 @@ class PennantServiceProvider extends ServiceProvider
             \Laravel\Octane\Events\TaskReceived::class,
             \Laravel\Octane\Events\TickReceived::class,
         ], fn () => $this->app[FeatureManager::class]
-            ->setContainer(Container::getInstance())
+            //->setContainer(Container::getInstance())
             ->flushCache());
 
         $this->app['events']->listen([
